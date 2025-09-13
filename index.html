@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Roommate Status Board</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>STATUS BOARD</h2>
+
+  <!-- 🔹 Login Form -->
+  <div id="login-container">
+    <h3>Login</h3>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" placeholder="Enter your email">
+
+    <label for="password">Password:</label>
+    <div class="password-container">
+      <input type="password" id="password" placeholder="Enter your password">
+      <button type="button" id="toggle-password">👁️</button>
+    </div>
+
+    <div class="login-buttons">
+      <button id="login-btn">Login</button>
+    </div>
+
+    <p id="login-error" style="color: red; display: none;"></p>
+  </div>
+
+  <!-- 🔹 Status Board (hidden until login) -->
+  <div id="app" style="display: none;">
+
+    <!-- Form to update status (only for logged-in user) -->
+    <div class="card">
+      <label>Activity:</label>
+      <select id="activity">
+        <option>Sleeping</option>
+        <option>Studying</option>
+        <option>Out</option>
+        <option>Free</option>
+      </select><br>
+
+      <label>From:</label>
+      <input type="time" id="start">
+
+      <label>To:</label>
+      <input type="time" id="end"><br>
+
+      <button id="update-btn">Update</button>
+      <button id="logout-btn">Logout</button>
+    </div>
+
+    <h3>Current Status</h3>
+    <div id="friends-container"></div>
+  </div>
+
+  <!-- Firebase + App JS -->
+  <script type="module" src="script.js"></script>
+</body>
+</html>
