@@ -237,4 +237,4 @@ function loadLogs(friendId, isCurrentUser) {
       }
     });
   });
-}
+}  
